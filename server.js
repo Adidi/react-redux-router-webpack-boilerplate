@@ -1,5 +1,4 @@
 "use strict";
-
 const path = require('path'),
     express = require('express');
 
@@ -21,6 +20,10 @@ app.use(require("webpack-hot-middleware")(compiler, {
     heartbeat: 10 * 1000
 }));
 
+//wildcard '/*' for react router need to be last!! to not ruin all static files (/dist/app.js) of webpack
+app.get('/*', (req, res, next) => {
+    res.sendFile(path.join(__dirname,'public','index.html'));
+});
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

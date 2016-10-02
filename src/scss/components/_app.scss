@@ -1,4 +1,28 @@
 
-h1{
-  background-color: greenyellow;
+$header-height: 50px;
+$aside-width: 100px;
+
+
+.app{
+
+  > header {
+    position: fixed;
+    width: 100%;
+    height: $header-height;
+    border-bottom: 1px solid black;
+  }
+
+  > aside{
+    position: fixed;
+    top: $header-height;
+    width: $aside-width;
+    height: 100%;
+    border-right: 1px solid black;
+  }
+
+  .content{
+    position: relative;
+    top: $header-height;
+    left: $aside-width;
+  }
 }

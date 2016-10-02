@@ -1,22 +1,8 @@
 import React, { PropTypes } from 'react';
-import App from './app';
+import { Router, browserHistory } from 'react-router';
+import routes from '../routes';
 
-class Root extends React.Component{
-
-    static propTypes = {
-        name: PropTypes.string.isRequired
-    };
-
-    render(){
-        let { name } = this.props;
-
-        return (
-            <div>
-                <App/>
-                <div className="root">Hello {name}</div>
-            </div>
-        )
-    }
-}
+const Root = () =>
+        <Router history={browserHistory} routes={routes} />;
 
 export default Root;
