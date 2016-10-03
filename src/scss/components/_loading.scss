@@ -1,0 +1,26 @@
+$base-line-height: 24px;
+$black: rgb(0,0,0);
+$off-black: rgba($black, 0.2);
+$spin-duration: 1s;
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  border-radius: 50%;
+  width: $base-line-height;
+  height: $base-line-height;
+  border: .25rem solid $off-black;
+  border-top-color: $black;
+  animation: spin $spin-duration infinite linear;
+  &--double {
+    border-style: double;
+    border-width: .5rem;
+  }
+}

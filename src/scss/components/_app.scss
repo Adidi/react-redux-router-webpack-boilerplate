@@ -10,6 +10,11 @@ $aside-width: 100px;
     width: 100%;
     height: $header-height;
     border-bottom: 1px solid black;
+    display: flex;
+
+    .loading{
+      margin: 10px 50px;
+    }
   }
 
   > aside{
@@ -21,7 +26,7 @@ $aside-width: 100px;
   }
 
   .content{
-    position: relative;
+    position: absolute;
     top: $header-height;
     left: $aside-width;
   }

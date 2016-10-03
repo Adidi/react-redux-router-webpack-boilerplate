@@ -1,0 +1,7 @@
+
+export const XHR_LOADING = 'XHR_LOADING';
+export const XHR_ERROR = 'XHR_ERROR';
+
+export const ITEMS_LOAD_SUCCESS = 'ITEMS_LOAD_SUCCESS';
+export const ADD_ITEM_LOAD_SUCCESS = 'ADD_ITEM_LOAD_SUCCESS';
+export const REMOVE_ITEM = 'REMOVE_ITEM';
