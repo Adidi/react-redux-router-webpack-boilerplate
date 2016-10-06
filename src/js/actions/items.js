@@ -15,6 +15,7 @@ export const loadItems = () => async dispatch => {
     }
     catch(err){
         dispatch(error(err));
+        throw err;
     }
 };
 
@@ -26,6 +27,7 @@ export const addItem = text => async dispatch => {
     }
     catch(err){
         dispatch(error(err));
+        throw err;
     }
 };
 

@@ -1,12 +1,13 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import rootReducer from './reducers';
 import thunk from 'redux-thunk';
+import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 
 
 const configureStore = () =>{
     const store = createStore(
         rootReducer,
-        compose(applyMiddleware(thunk), window.devToolsExtension ? window.devToolsExtension() : f => f)
+        compose(applyMiddleware(reduxImmutableStateInvariant(),thunk), window.devToolsExtension ? window.devToolsExtension() : f => f)
     );
 
     // store.subscribe(() => {
