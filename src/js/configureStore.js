@@ -6,7 +6,7 @@ import thunk from 'redux-thunk';
 const configureStore = () =>{
     const store = createStore(
         rootReducer,
-        compose(applyMiddleware(thunk))
+        compose(applyMiddleware(thunk), window.devToolsExtension ? window.devToolsExtension() : f => f)
     );
 
     // store.subscribe(() => {
